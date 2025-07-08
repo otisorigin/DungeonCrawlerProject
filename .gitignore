@@ -1,0 +1,23 @@
+#Build artifacts
+
+build/ bin/ obj/ *.o *.obj *.exe *.out *.pdb
+
+#CMake generated files
+
+CMakeCache.txt CMakeFiles/ cmake_install.cmake install_manifest.txt
+
+#CLion IDE files
+
+.idea/ *.iml
+
+#OS-specific files
+
+.DS_Store Thumbs.db desktop.ini
+
+#Temporary files
+
+*.tmp *.bak *~
+
+#Project-specific
+
+*.user
