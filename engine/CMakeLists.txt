@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.15)
+project(engine)
+add_library(engine src/engine.cpp src/engine.h)
+find_package(raylib REQUIRED)
+target_link_libraries(engine PUBLIC raylib)
+target_include_directories(engine PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src) 
