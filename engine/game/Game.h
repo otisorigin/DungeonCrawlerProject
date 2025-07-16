@@ -5,6 +5,7 @@
 
 #pragma once
 
+#include <memory>
 #include <raylib.h>
 #include "world/World.h"
 
@@ -28,5 +29,5 @@ private:
     Camera camera {};
     CameraMode cameraMode;
 
-    World* world = nullptr;
+    std::unique_ptr<World> currentWorld;
 };

@@ -6,21 +6,24 @@
 #pragma once
 
 #include <raylib.h>
+#include <vector>
 
 #define MAX_COLUMNS 20
 
 class World {
 
-    World();
-    ~World();
-
 public:
 
-    static World* GetInstance();
+    void GenerateWorld();
 
+    const std::vector<float>& GetHeights() const { return heights; }
+    const std::vector<Vector3>& GetPositions() const { return positions; }
+    const std::vector<Color>& GetColors() const { return colors; }
+
+private:
     //WORLD
-    float heights[MAX_COLUMNS] = { 0 };
-    Vector3 positions[MAX_COLUMNS] = { 0 };
-    Color colors[MAX_COLUMNS] = { 0 };
+    std::vector<float> heights;
+    std::vector<Vector3> positions;
+    std::vector<Color> colors;
     //WORLD
 };

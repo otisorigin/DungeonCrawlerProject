@@ -9,7 +9,8 @@ add_library(engine
         camera/Camera.h
         render/Render.cpp render/Render.h
         input/Input.cpp input/Input.h
-#        world/world.cpp world/World.h
+        world/World.cpp
+        #        world/world.cpp world/World.h
 )
 find_package(raylib REQUIRED)
 target_link_libraries(engine PUBLIC raylib)

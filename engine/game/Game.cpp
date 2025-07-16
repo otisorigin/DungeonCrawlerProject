@@ -119,8 +119,8 @@ void Game::RunGameLoop() {
                 // Draw some cubes around
                 for (int i = 0; i < MAX_COLUMNS; i++)
                 {
-                    DrawCube(positions[i], 2.0f, heights[i], 2.0f, colors[i]);
-                    DrawCubeWires(positions[i], 2.0f, heights[i], 2.0f, MAROON);
+                    DrawCube(currentWorld->GetPositions()[i], 2.0f, currentWorld->GetHeights()[i], 2.0f, currentWorld->GetColors()[i]);
+                    DrawCubeWires(currentWorld->GetPositions()[i], 2.0f, currentWorld->GetHeights()[i], 2.0f, MAROON);
                 }
 
                 // Draw player cube
@@ -172,23 +172,19 @@ void Game::InitGame() {
 
     InitCamera();
 
-    // WORLD generation
-    for (int i = 0; i < MAX_COLUMNS; i++)
-    {
-        heights[i] = (float)GetRandomValue(1, 12);
-        positions[i] = (Vector3){ (float)GetRandomValue(-15, 15), heights[i]/2.0f, (float)GetRandomValue(-15, 15) };
-        colors[i] = (Color){ static_cast<unsigned char>(GetRandomValue(20, 255)), static_cast<unsigned char>(GetRandomValue(10, 55)), 30, 255 };
-    }
-    // WORLD generation
-
     DisableCursor();                    // Limit cursor to relative movement inside the window
 
     SetTargetFPS(60);                   // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
+
+    currentWorld = std::make_unique<World>();
+    currentWorld->GenerateWorld();
 }
 
 void Game::Shutdown() {
     // De-Initialization
+
+    currentWorld.reset();
     //--------------------------------------------------------------------------------------
     CloseWindow();        // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
