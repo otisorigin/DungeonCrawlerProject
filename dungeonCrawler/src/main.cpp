@@ -7,7 +7,7 @@
 
 int main() {
     DungeonCrawlerProject game;
-    game.run();
+    game.Run();
 
     return 0;
 }
