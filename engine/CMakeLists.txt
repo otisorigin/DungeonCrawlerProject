@@ -10,8 +10,11 @@ add_library(engine
         render/Render.cpp render/Render.h
         input/Input.cpp input/Input.h
         world/World.cpp
+        world/TileLevel.cpp
+        world/TileLevel.h
         #        world/world.cpp world/World.h
 )
 find_package(raylib REQUIRED)
-target_link_libraries(engine PUBLIC raylib)
-target_include_directories(engine PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}) 
+find_package(nlohmann_json REQUIRED)
+target_link_libraries(engine PUBLIC raylib nlohmann_json::nlohmann_json)
+target_include_directories(engine PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

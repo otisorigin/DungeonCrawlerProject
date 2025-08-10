@@ -162,6 +162,21 @@ void Game::RunGameLoop() {
     }
 }
 
+void Game::InitGameWithProperties(const std::string &PropertiesPath) {
+    //TODO parse config.json
+    //TODO load start level
+}
+
+void Game::LoadLevel(const std::string &relativePath) {
+    std::string fullPath = contentRoot + relativePath;
+
+    currentWorld = std::make_unique<World>();
+
+    currentWorld->PrepareWorldData(fullPath);
+
+    currentWorld->GenerateWorld();
+}
+
 void Game::InitGame() {
     // Initialization
     //--------------------------------------------------------------------------------------
@@ -176,9 +191,6 @@ void Game::InitGame() {
 
     SetTargetFPS(60);                   // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
-
-    currentWorld = std::make_unique<World>();
-    currentWorld->GenerateWorld();
 }
 
 void Game::Shutdown() {

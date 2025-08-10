@@ -14,6 +14,7 @@ class World {
 
 public:
 
+    void PrepareWorldData(const std::string& LevelPath);
     void GenerateWorld();
 
     const std::vector<float>& GetHeights() const { return heights; }
