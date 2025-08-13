@@ -34,4 +34,7 @@ private:
     std::unique_ptr<World> currentWorld;
 
     std::string contentRoot;
+
+    int screenWidth;
+    int screenHeight;
 };

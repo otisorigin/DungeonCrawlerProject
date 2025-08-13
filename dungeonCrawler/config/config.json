@@ -1,1 +1,5 @@
-{ "start_level": "content/levels/Test_dungeon.json" }
+{
+  "start_level": "levels/Test_dungeon.json",
+  "screen_width": 800,
+  "screen_height": 450
+}

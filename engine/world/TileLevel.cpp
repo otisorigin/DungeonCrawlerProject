@@ -15,12 +15,6 @@ void from_json(const json& j, Layer& l) {
     j.at("gridCellsY").get_to(l.gridCellsY);
 }
 
-void from_json(const json& j, TileLayer& t) {
-    from_json(j, static_cast<Layer&>(t));
-    j.at("tileset").get_to(t.tileSet);
-    j.at("data").get_to(t.data);
-}
-
 void from_json(const json& j, Entity& e) {
     j.at("name").get_to(e.name);
     j.at("id").get_to(e.id);
@@ -29,7 +23,12 @@ void from_json(const json& j, Entity& e) {
     j.at("y").get_to(e.y);
     j.at("originX").get_to(e.originX);
     j.at("originY").get_to(e.originY);
-    if (j.contains("rotation")) j.at("rotation").get_to(e.rotation);
+    if (j.contains("rotation")) {
+        j.at("rotation").get_to(e.rotation);
+    }
+    if (j.contains("values")) {
+        j.at("values").at("mesh").get_to(e.mesh);
+    }
 }
 
 void from_json(const json& j, EntityLayer& el) {
@@ -39,10 +38,8 @@ void from_json(const json& j, EntityLayer& el) {
 
 void from_json(const json& j, TileLevel& level) {
     for (auto& layer : j.at("layers")) {
-        if (layer.contains("data")) {
-            level.tileLayers.push_back(layer.get<TileLayer>());
-        } else if (layer.contains("entities")) {
-            level.entityLayers.push_back(layer.get<EntityLayer>());
+        if (layer.contains("entities")) {
+            level.entityLayers.emplace(layer.at("name"), layer.get<EntityLayer>());
         }
     }
 }

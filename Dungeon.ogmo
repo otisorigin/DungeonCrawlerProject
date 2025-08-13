@@ -18,19 +18,18 @@
   "entityTags": [],
   "layers": [
     {
-      "definition": "tile",
+      "definition": "entity",
       "name": "Floor",
       "gridSize": {"x": 8, "y": 8},
-      "exportID": "67015596",
-      "exportMode": 0,
-      "arrayMode": 1,
-      "defaultTileset": "Dungeon"
+      "exportID": "94379584",
+      "requiredTags": [],
+      "excludedTags": []
     },
     {
       "definition": "entity",
       "name": "Walls",
       "gridSize": {"x": 8, "y": 8},
-      "exportID": "67011955",
+      "exportID": "94378269",
       "requiredTags": [],
       "excludedTags": []
     },
@@ -38,14 +37,14 @@
       "definition": "entity",
       "name": "GameObjects",
       "gridSize": {"x": 8, "y": 8},
-      "exportID": "68751628",
+      "exportID": "94377131",
       "requiredTags": [],
       "excludedTags": []
     }
   ],
   "entities": [
     {
-      "exportID": "67016247",
+      "exportID": "94378381",
       "name": "Wall",
       "limit": -1,
       "size": {"x": 8, "y": 32},
@@ -62,7 +61,7 @@
           {"x": 1, "y": 1}
         ]
       },
-      "color": "#726d6dff",
+      "color": "#959595ff",
       "tileX": false,
       "tileY": false,
       "tileSize": {"x": 16, "y": 16},
@@ -78,11 +77,19 @@
       "nodeDisplay": 0,
       "nodeGhost": true,
       "tags": [],
-      "values": []
+      "values": [
+        {
+          "name": "mesh",
+          "definition": "Filepath",
+          "display": 0,
+          "defaults": "proj:../content/objects/Wall.glb",
+          "extensions": []
+        }
+      ]
     },
     {
-      "exportID": "67072580",
-      "name": "SpawnPoint",
+      "exportID": "94383442",
+      "name": "PlayerSpawn",
       "limit": -1,
       "size": {"x": 8, "y": 8},
       "origin": {"x": 0, "y": 0},
@@ -101,7 +108,7 @@
       "color": "#ff0000ff",
       "tileX": false,
       "tileY": false,
-      "tileSize": {"x": 8, "y": 8},
+      "tileSize": {"x": 16, "y": 16},
       "resizeableX": false,
       "resizeableY": false,
       "rotatable": false,
@@ -115,9 +122,139 @@
       "nodeGhost": true,
       "tags": [],
       "values": []
+    },
+    {
+      "exportID": "94416282",
+      "name": "Floor_1",
+      "limit": -1,
+      "size": {"x": 8, "y": 8},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#000000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 16, "y": 16},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": [],
+      "values": [
+        {
+          "name": "mesh",
+          "definition": "Filepath",
+          "display": 1,
+          "defaults": "lvl:dungeonCrawler/content/objects/Floor_1.glb",
+          "extensions": []
+        }
+      ]
+    },
+    {
+      "exportID": "94415482",
+      "name": "Floor_2",
+      "limit": -1,
+      "size": {"x": 8, "y": 8},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#000000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 16, "y": 16},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": [],
+      "values": [
+        {
+          "name": "mesh",
+          "definition": "Filepath",
+          "display": 1,
+          "defaults": "lvl:dungeonCrawler/content/objects/Floor_2.glb",
+          "extensions": []
+        }
+      ]
+    },
+    {
+      "exportID": "94428070",
+      "name": "Floor_3",
+      "limit": -1,
+      "size": {"x": 8, "y": 8},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#000000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 16, "y": 16},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": [],
+      "values": [
+        {
+          "name": "mesh",
+          "definition": "Filepath",
+          "display": 0,
+          "defaults": "lvl:dungeonCrawler/content/objects/Floor_3.glb",
+          "extensions": []
+        }
+      ]
     }
   ],
-  "tilesets": [
-    {"label": "Dungeon", "path": "Dungeon Tileset + Spikes.png", "image": "data:image/png;base64,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", "tileWidth": 8, "tileHeight": 8, "tileSeparationX": 0, "tileSeparationY": 0, "tileMarginX": 0, "tileMarginY": 0}
-  ]
+  "tilesets": []
 }

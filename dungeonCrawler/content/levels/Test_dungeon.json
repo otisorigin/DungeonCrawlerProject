@@ -1,72 +1,591 @@
 {
   "ogmoVersion": "3.4.0",
-  "width": 128,
+  "width": 200,
   "height": 128,
   "offsetX": 0,
   "offsetY": 0,
   "layers": [
     {
       "name": "Floor",
-      "_eid": "67015596",
+      "_eid": "94379584",
       "offsetX": 0,
       "offsetY": 0,
       "gridCellWidth": 8,
       "gridCellHeight": 8,
-      "gridCellsX": 16,
+      "gridCellsX": 25,
       "gridCellsY": 16,
-      "tileset": "Dungeon",
-      "data2D": [
-        [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-        [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-        [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-        [-1, 219, 219, 219, 219, 219, 219, 219, 219, 219, 219, -1, -1, -1, -1, -1],
-        [-1, 349, 349, 349, 349, 349, 349, 349, 219, 219, 219, -1, -1, -1, -1, -1],
-        [-1, 349, 349, 349, 349, 349, 349, 349, 219, 219, 219, -1, -1, -1, -1, -1],
-        [-1, 349, 349, 349, 349, 349, 349, 349, 219, 219, 219, -1, -1, -1, -1, -1],
-        [-1, 349, 349, 349, 349, 349, 349, 349, 219, 219, 219, -1, -1, -1, -1, -1],
-        [-1, 349, 349, 349, 349, 349, 349, 349, 219, 219, 219, -1, -1, -1, -1, -1],
-        [-1, 349, 349, 349, 349, 349, 349, 349, 219, 219, 219, -1, -1, -1, -1, -1],
-        [-1, 349, 349, 349, 349, 349, 349, 349, 219, 219, 219, -1, -1, -1, -1, -1],
-        [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-        [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-        [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-        [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-        [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
-      ],
-      "exportMode": 0,
-      "arrayMode": 1
+      "entities": [
+        {
+          "name": "Floor_1",
+          "id": 0,
+          "_eid": "94416282",
+          "x": 32,
+          "y": 96,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_1.glb"}
+        },
+        {
+          "name": "Floor_2",
+          "id": 1,
+          "_eid": "94415482",
+          "x": 40,
+          "y": 96,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_2.glb"}
+        },
+        {
+          "name": "Floor_2",
+          "id": 2,
+          "_eid": "94415482",
+          "x": 48,
+          "y": 96,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_2.glb"}
+        },
+        {
+          "name": "Floor_3",
+          "id": 3,
+          "_eid": "94428070",
+          "x": 56,
+          "y": 96,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_3.glb"}
+        },
+        {
+          "name": "Floor_1",
+          "id": 4,
+          "_eid": "94416282",
+          "x": 32,
+          "y": 88,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_1.glb"}
+        },
+        {
+          "name": "Floor_2",
+          "id": 5,
+          "_eid": "94415482",
+          "x": 40,
+          "y": 88,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_2.glb"}
+        },
+        {
+          "name": "Floor_3",
+          "id": 6,
+          "_eid": "94428070",
+          "x": 40,
+          "y": 80,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_3.glb"}
+        },
+        {
+          "name": "Floor_2",
+          "id": 7,
+          "_eid": "94415482",
+          "x": 32,
+          "y": 80,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_2.glb"}
+        },
+        {
+          "name": "Floor_1",
+          "id": 8,
+          "_eid": "94416282",
+          "x": 64,
+          "y": 96,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_1.glb"}
+        },
+        {
+          "name": "Floor_2",
+          "id": 9,
+          "_eid": "94415482",
+          "x": 48,
+          "y": 88,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_2.glb"}
+        },
+        {
+          "name": "Floor_3",
+          "id": 10,
+          "_eid": "94428070",
+          "x": 64,
+          "y": 88,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_3.glb"}
+        },
+        {
+          "name": "Floor_2",
+          "id": 11,
+          "_eid": "94415482",
+          "x": 56,
+          "y": 88,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_2.glb"}
+        },
+        {
+          "name": "Floor_1",
+          "id": 12,
+          "_eid": "94416282",
+          "x": 48,
+          "y": 80,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_1.glb"}
+        },
+        {
+          "name": "Floor_2",
+          "id": 13,
+          "_eid": "94415482",
+          "x": 56,
+          "y": 80,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_2.glb"}
+        },
+        {
+          "name": "Floor_3",
+          "id": 14,
+          "_eid": "94428070",
+          "x": 64,
+          "y": 80,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_3.glb"}
+        },
+        {
+          "name": "Floor_1",
+          "id": 16,
+          "_eid": "94416282",
+          "x": 72,
+          "y": 96,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_1.glb"}
+        },
+        {
+          "name": "Floor_3",
+          "id": 17,
+          "_eid": "94428070",
+          "x": 72,
+          "y": 88,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_3.glb"}
+        },
+        {
+          "name": "Floor_1",
+          "id": 19,
+          "_eid": "94416282",
+          "x": 72,
+          "y": 80,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_1.glb"}
+        },
+        {
+          "name": "Floor_3",
+          "id": 21,
+          "_eid": "94428070",
+          "x": 32,
+          "y": 72,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_3.glb"}
+        },
+        {
+          "name": "Floor_1",
+          "id": 22,
+          "_eid": "94416282",
+          "x": 40,
+          "y": 72,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_1.glb"}
+        },
+        {
+          "name": "Floor_3",
+          "id": 23,
+          "_eid": "94428070",
+          "x": 48,
+          "y": 72,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_3.glb"}
+        },
+        {
+          "name": "Floor_2",
+          "id": 24,
+          "_eid": "94415482",
+          "x": 56,
+          "y": 72,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_2.glb"}
+        },
+        {
+          "name": "Floor_1",
+          "id": 25,
+          "_eid": "94416282",
+          "x": 64,
+          "y": 72,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_1.glb"}
+        },
+        {
+          "name": "Floor_3",
+          "id": 26,
+          "_eid": "94428070",
+          "x": 72,
+          "y": 72,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_3.glb"}
+        },
+        {
+          "name": "Floor_1",
+          "id": 28,
+          "_eid": "94416282",
+          "x": 32,
+          "y": 64,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_1.glb"}
+        },
+        {
+          "name": "Floor_1",
+          "id": 29,
+          "_eid": "94416282",
+          "x": 48,
+          "y": 56,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_1.glb"}
+        },
+        {
+          "name": "Floor_1",
+          "id": 30,
+          "_eid": "94416282",
+          "x": 32,
+          "y": 48,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_1.glb"}
+        },
+        {
+          "name": "Floor_1",
+          "id": 31,
+          "_eid": "94416282",
+          "x": 64,
+          "y": 48,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_1.glb"}
+        },
+        {
+          "name": "Floor_1",
+          "id": 32,
+          "_eid": "94416282",
+          "x": 72,
+          "y": 64,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_1.glb"}
+        },
+        {
+          "name": "Floor_2",
+          "id": 34,
+          "_eid": "94415482",
+          "x": 40,
+          "y": 64,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_2.glb"}
+        },
+        {
+          "name": "Floor_2",
+          "id": 35,
+          "_eid": "94415482",
+          "x": 56,
+          "y": 56,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_2.glb"}
+        },
+        {
+          "name": "Floor_2",
+          "id": 36,
+          "_eid": "94415482",
+          "x": 32,
+          "y": 56,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_2.glb"}
+        },
+        {
+          "name": "Floor_2",
+          "id": 37,
+          "_eid": "94415482",
+          "x": 56,
+          "y": 64,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_2.glb"}
+        },
+        {
+          "name": "Floor_3",
+          "id": 38,
+          "_eid": "94428070",
+          "x": 40,
+          "y": 48,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_3.glb"}
+        },
+        {
+          "name": "Floor_3",
+          "id": 39,
+          "_eid": "94428070",
+          "x": 40,
+          "y": 56,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_3.glb"}
+        },
+        {
+          "name": "Floor_3",
+          "id": 40,
+          "_eid": "94428070",
+          "x": 48,
+          "y": 64,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_3.glb"}
+        },
+        {
+          "name": "Floor_3",
+          "id": 41,
+          "_eid": "94428070",
+          "x": 72,
+          "y": 56,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_3.glb"}
+        },
+        {
+          "name": "Floor_3",
+          "id": 43,
+          "_eid": "94428070",
+          "x": 64,
+          "y": 56,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_3.glb"}
+        },
+        {
+          "name": "Floor_1",
+          "id": 44,
+          "_eid": "94416282",
+          "x": 48,
+          "y": 48,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_1.glb"}
+        },
+        {
+          "name": "Floor_2",
+          "id": 46,
+          "_eid": "94415482",
+          "x": 56,
+          "y": 48,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_2.glb"}
+        },
+        {
+          "name": "Floor_2",
+          "id": 47,
+          "_eid": "94415482",
+          "x": 72,
+          "y": 48,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_2.glb"}
+        },
+        {
+          "name": "Floor_2",
+          "id": 48,
+          "_eid": "94415482",
+          "x": 64,
+          "y": 64,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_2.glb"}
+        },
+        {
+          "name": "Floor_3",
+          "id": 49,
+          "_eid": "94428070",
+          "x": 40,
+          "y": 40,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_3.glb"}
+        },
+        {
+          "name": "Floor_3",
+          "id": 50,
+          "_eid": "94428070",
+          "x": 64,
+          "y": 40,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_3.glb"}
+        },
+        {
+          "name": "Floor_3",
+          "id": 51,
+          "_eid": "94428070",
+          "x": 56,
+          "y": 40,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_3.glb"}
+        },
+        {
+          "name": "Floor_2",
+          "id": 52,
+          "_eid": "94415482",
+          "x": 32,
+          "y": 40,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_2.glb"}
+        },
+        {
+          "name": "Floor_1",
+          "id": 54,
+          "_eid": "94416282",
+          "x": 48,
+          "y": 40,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_1.glb"}
+        },
+        {
+          "name": "Floor_1",
+          "id": 55,
+          "_eid": "94416282",
+          "x": 72,
+          "y": 40,
+          "originX": 0,
+          "originY": 0,
+          "values": {"mesh": "proj:dungeonCrawler/content/objects/Floor_1.glb"}
+        }
+      ]
     },
     {
       "name": "Walls",
-      "_eid": "67011955",
+      "_eid": "94378269",
       "offsetX": 0,
       "offsetY": 0,
       "gridCellWidth": 8,
       "gridCellHeight": 8,
-      "gridCellsX": 16,
+      "gridCellsX": 25,
       "gridCellsY": 16,
       "entities": [
-        {"name": "Wall", "id": 0, "_eid": "67016247", "x": 8, "y": 56, "originX": 0, "originY": 0, "rotation": 0},
-        {"name": "Wall", "id": 2, "_eid": "67016247", "x": 8, "y": 24, "originX": 0, "originY": 0, "rotation": 0},
-        {"name": "Wall", "id": 6, "_eid": "67016247", "x": 80, "y": 24, "originX": 0, "originY": 0, "rotation": 0},
-        {"name": "Wall", "id": 7, "_eid": "67016247", "x": 80, "y": 56, "originX": 0, "originY": 0, "rotation": 0},
-        {"name": "Wall", "id": 8, "_eid": "67016247", "x": 16, "y": 87, "originX": 0, "originY": 0, "rotation": -1.5707963267948966},
-        {"name": "Wall", "id": 9, "_eid": "67016247", "x": 16, "y": 32, "originX": 0, "originY": 0, "rotation": -1.5707963267948966},
-        {"name": "Wall", "id": 10, "_eid": "67016247", "x": 48, "y": 32, "originX": 0, "originY": 0, "rotation": -1.5707963267948966},
-        {"name": "Wall", "id": 11, "_eid": "67016247", "x": 48, "y": 88, "originX": 0, "originY": 0, "rotation": -1.5707963267948966}
+        {
+          "name": "Wall",
+          "id": 0,
+          "_eid": "94378381",
+          "x": 32,
+          "y": 72,
+          "originX": 0,
+          "originY": 0,
+          "rotation": 0,
+          "values": {"mesh": "proj:../content/objects/Wall.glb"}
+        },
+        {
+          "name": "Wall",
+          "id": 1,
+          "_eid": "94378381",
+          "x": 40,
+          "y": 104,
+          "originX": 0,
+          "originY": 0,
+          "rotation": -1.5707963267948966,
+          "values": {"mesh": "proj:../content/objects/Wall.glb"}
+        },
+        {
+          "name": "Wall",
+          "id": 2,
+          "_eid": "94378381",
+          "x": 32,
+          "y": 40,
+          "originX": 0,
+          "originY": 0,
+          "rotation": 0,
+          "values": {"mesh": "proj:../content/objects/Wall.glb"}
+        },
+        {
+          "name": "Wall",
+          "id": 3,
+          "_eid": "94378381",
+          "x": 72,
+          "y": 72,
+          "originX": 0,
+          "originY": 0,
+          "rotation": 0,
+          "values": {"mesh": "proj:../content/objects/Wall.glb"}
+        },
+        {
+          "name": "Wall",
+          "id": 4,
+          "_eid": "94378381",
+          "x": 72,
+          "y": 40,
+          "originX": 0,
+          "originY": 0,
+          "rotation": 0,
+          "values": {"mesh": "proj:../content/objects/Wall.glb"}
+        },
+        {
+          "name": "Wall",
+          "id": 5,
+          "_eid": "94378381",
+          "x": 40,
+          "y": 48,
+          "originX": 0,
+          "originY": 0,
+          "rotation": -1.5707963267948966,
+          "values": {"mesh": "proj:../content/objects/Wall.glb"}
+        }
       ]
     },
     {
       "name": "GameObjects",
-      "_eid": "68751628",
+      "_eid": "94377131",
       "offsetX": 0,
       "offsetY": 0,
       "gridCellWidth": 8,
       "gridCellHeight": 8,
-      "gridCellsX": 16,
+      "gridCellsX": 25,
       "gridCellsY": 16,
       "entities": [
-        {"name": "SpawnPoint", "id": 0, "_eid": "67072580", "x": 24, "y": 64, "originX": 0, "originY": 0}
+        {"name": "PlayerSpawn", "id": 0, "_eid": "94383442", "x": 48, "y": 80, "originX": 0, "originY": 0}
       ]
     }
   ]

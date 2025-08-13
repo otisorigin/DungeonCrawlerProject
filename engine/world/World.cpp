@@ -8,18 +8,23 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <spdlog/spdlog.h>
 
 #include "TileLevel.h"
 
 void World::PrepareWorldData(const std::string& LevelPath) {
-    std::ifstream file(LevelPath);
+    std::ifstream file("../" + LevelPath);
+
+    if (!file.is_open()) {
+        throw std::runtime_error("Can't open level: " + LevelPath);
+    }
+
     json j;
     file >> j;
 
     const TileLevel level = TileLevel::fromJson(j);
 
-    std::cout << "Tile layers: " << level.tileLayers.size() << "\n";
-    std::cout << "Entity layers: " << level.entityLayers.size() << "\n";
+    spdlog::info("Entity layers: " + level.entityLayers.size());
 }
 
 void World::GenerateWorld() {

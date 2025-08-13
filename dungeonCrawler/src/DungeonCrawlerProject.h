@@ -11,6 +11,4 @@ public:
     DungeonCrawlerProject();
 
     void Run();
-
-    // void run();
 };

@@ -12,7 +12,4 @@ void DungeonCrawlerProject::Run() {
     Game game;
     game.SetContentRoot("../dungeonCrawler/content/");
     game.InitGameWithProperties("../dungeonCrawler/config/config.json");
-
-    //TODO not call game loop manually?
-    game.RunGameLoop();
 }

@@ -1,9 +1,15 @@
 // /*
-//  * Copyright © 2025 Fiodar Rymarovich
+//  * Copyright © ${YEAR} Fiodar Rymarovich
 //  * All rights reserved.
 //  *
 
 #include "Game.h"
+
+#include <fstream>
+#include <nlohmann/json.hpp>
+#include <nlohmann/json_fwd.hpp>
+#include <spdlog/spdlog.h>
+
 #include "raylib.h"
 #include "rcamera.h"
 
@@ -163,12 +169,29 @@ void Game::RunGameLoop() {
 }
 
 void Game::InitGameWithProperties(const std::string &PropertiesPath) {
-    //TODO parse config.json
-    //TODO load start level
+    spdlog::set_pattern("[%L] %s:%# %v");
+
+    spdlog::info("Start init game");
+
+    std::ifstream file("../" + PropertiesPath);
+
+     if (!file.is_open()) {
+        throw std::runtime_error("Can't open config file: " + PropertiesPath);
+    }
+
+    nlohmann::json config;
+    file >> config;
+
+    LoadLevel(config.at("start_level"));
+
+    screenWidth = config.at("screen_width");
+    screenHeight = config.at("screen_height");
+
+    RunGameLoop();
 }
 
-void Game::LoadLevel(const std::string &relativePath) {
-    std::string fullPath = contentRoot + relativePath;
+void Game::LoadLevel(const std::string& relativePath) {
+    const std::string fullPath = contentRoot + relativePath;
 
     currentWorld = std::make_unique<World>();
 
@@ -180,8 +203,8 @@ void Game::LoadLevel(const std::string &relativePath) {
 void Game::InitGame() {
     // Initialization
     //--------------------------------------------------------------------------------------
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    // const int screenWidth = 800;
+    // const int screenHeight = 450;
 
     InitWindow(screenWidth, screenHeight, "raylib [core] example - 3d camera first person");
 

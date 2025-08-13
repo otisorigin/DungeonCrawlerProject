@@ -20,11 +20,6 @@ struct Layer {
     int gridCellsY;
 };
 
-struct TileLayer : Layer {
-    std::string tileSet;
-    std::vector<int> data;
-};
-
 struct Entity {
     std::string name;
     int id;
@@ -34,6 +29,7 @@ struct Entity {
     int originX;
     int originY;
     float rotation;
+    std::string mesh;
 };
 
 struct EntityLayer : Layer {
@@ -43,16 +39,12 @@ struct EntityLayer : Layer {
 class TileLevel {
 
 public:
-    std::vector<TileLayer> tileLayers;
-    std::vector<EntityLayer> entityLayers;
-
-    //TODO map between Entity and 3d model
+    std::map<std::string, EntityLayer> entityLayers;
 
     static TileLevel fromJson(const json& j);
 
 private:
     friend void from_json(const json& j, Layer& l);
-    friend void from_json(const json& j, TileLayer& t);
     friend void from_json(const json& j, Entity& e);
     friend void from_json(const json& j, EntityLayer& el);
     friend void from_json(const json& j, TileLevel& level);
