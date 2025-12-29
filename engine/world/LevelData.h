@@ -1,0 +1,52 @@
+// /*
+//  * Copyright © 8.08.25 Fiodar Rymarovich
+//  * All rights reserved.
+//  *
+
+#pragma once
+#include <string>
+#include <vector>
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
+
+struct Layer {
+    std::string name;
+    int offsetX;
+    int offsetY;
+    int gridCellWidth;
+    int gridCellHeight;
+    int gridCellsX;
+    int gridCellsY;
+};
+
+struct Entity {
+    std::string name;
+    int id;
+    std::string _eid;
+    int x;
+    int y;
+    int originX;
+    int originY;
+    float rotation;
+    std::string mesh;
+    std::string meshName;
+};
+
+struct EntityLayer : Layer {
+    std::vector<Entity> entities;
+};
+
+class LevelData {
+
+public:
+    std::map<std::string, EntityLayer> entityLayers;
+
+    static LevelData fromJson(const json& j);
+
+private:
+    friend void from_json(const json& j, Layer& l);
+    friend void from_json(const json& j, Entity& e);
+    friend void from_json(const json& j, EntityLayer& el);
+    friend void from_json(const json& j, LevelData& level);
+};

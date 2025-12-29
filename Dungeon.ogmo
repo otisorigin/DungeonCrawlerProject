@@ -84,7 +84,8 @@
           "display": 0,
           "defaults": "proj:../content/objects/Wall.glb",
           "extensions": []
-        }
+        },
+        {"name": "mesh_name", "definition": "String", "display": 0, "defaults": "Wall3_01", "maxLength": 0, "trimWhitespace": true}
       ]
     },
     {
@@ -164,7 +165,8 @@
           "display": 1,
           "defaults": "lvl:dungeonCrawler/content/objects/Floor_1.glb",
           "extensions": []
-        }
+        },
+        {"name": "mesh_name", "definition": "String", "display": 0, "defaults": "Tile1_01", "maxLength": 0, "trimWhitespace": true}
       ]
     },
     {
@@ -208,7 +210,8 @@
           "display": 1,
           "defaults": "lvl:dungeonCrawler/content/objects/Floor_2.glb",
           "extensions": []
-        }
+        },
+        {"name": "mesh_name", "definition": "String", "display": 0, "defaults": "Tile2_01", "maxLength": 0, "trimWhitespace": true}
       ]
     },
     {
@@ -252,7 +255,8 @@
           "display": 0,
           "defaults": "lvl:dungeonCrawler/content/objects/Floor_3.glb",
           "extensions": []
-        }
+        },
+        {"name": "mesh_name", "definition": "String", "display": 0, "defaults": "Tile3_01", "maxLength": 0, "trimWhitespace": true}
       ]
     }
   ],

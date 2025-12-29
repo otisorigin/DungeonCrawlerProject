@@ -1,5 +1,5 @@
 // /*
-//  * Copyright © 2025 Fiodar Rymarovich
+//  * Copyright © ${YEAR} Fiodar Rymarovich
 //  * All rights reserved.
 //  *
 
@@ -21,6 +21,10 @@ public:
     void InitGameWithProperties(const std::string& PropertiesPath);
 
 protected:
+
+    bool GameUpdate();
+
+    void GameDraw();
 
     void InitGame();
     void Shutdown();
